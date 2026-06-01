@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F4FF"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📩 SMS to Email Forwarder"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS আসলে আপনার Email এ চলে যাবে"
+            android:textSize="13sp"
+            android:textColor="#666"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="20dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="আপনার Gmail (যেটা দিয়ে পাঠাবে)"
+                android:textSize="13sp"
+                android:textColor="#333"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="example@gmail.com"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gmail App Password (16 digit)"
+                android:textSize="13sp"
+                android:textColor="#333"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="xxxx xxxx xxxx xxxx"
+                android:inputType="textPassword"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Gmail → Settings → 2FA চালু করে App Password নিন"
+                android:textSize="11sp"
+                android:textColor="#E65100"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="যে Email এ forward হবে"
+                android:textSize="13sp"
+                android:textColor="#333"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etForwardTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="forward@email.com"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Enable Switch -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SMS Forward চালু করুন"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#1A237E"/>
+
+                <Switch
+                    android:id="@+id/switchEnable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="✅ সেটিং সেভ করুন"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:background="#1A237E"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Info box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E8F5E9"
+            android:padding="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📌 কিভাবে কাজ করে"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="১. Gmail এ 2-Factor Auth চালু করুন\n২. App Password তৈরি করুন\n৩. উপরে সব তথ্য দিন\n৪. Switch চালু করুন\n৫. Internet থাকলেই SMS forward হবে!"
+                android:textSize="13sp"
+                android:textColor="#333"
+                android:lineSpacingMultiplier="1.5"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
